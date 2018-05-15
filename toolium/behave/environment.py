@@ -33,6 +33,29 @@ from toolium.visual_test import VisualTest
 from toolium.pageelements import PageElement
 from toolium.behave.env_utils import DynamicEnvironment
 
+from behave import fixture
+
+
+@fixture
+def before_all_fixture(context):
+    before_all(context)
+    yield None
+    after_all(context)
+
+
+@fixture
+def before_feature_fixture(context, feature):
+    before_feature(context, feature)
+    yield None
+    after_feature(context, feature)
+
+
+@fixture
+def before_scenario_fixture(context, scenario):
+    before_scenario(context, scenario)
+    yield None
+    after_scenario(context, scenario)
+
 
 def before_all(context):
     """Initialization method that will be executed before the test execution

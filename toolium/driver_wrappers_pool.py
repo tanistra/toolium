@@ -247,7 +247,7 @@ class DriverWrappersPool(object):
 
         :returns: default config directory
         """
-        test_path = os.path.dirname(os.path.realpath(inspect.getouterframes(inspect.currentframe())[2][1]))
+        test_path = os.path.dirname(os.path.realpath(inspect.getouterframes(inspect.currentframe())[5][1]))
         return os.path.join(test_path, 'conf')
 
     @staticmethod
