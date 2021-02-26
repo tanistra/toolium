@@ -330,7 +330,7 @@ class VisualTest(object):
             for web_element in web_elements:
                 element_box = self.get_element_box(web_element)
                 draw = ImageDraw.Draw(img)
-                draw.rectangle(element_box, fill="red")
+                draw.rectangle(element_box, fill="black")
         return img
 
     def compare_files(self, report_name, image_file, baseline_file, threshold):
